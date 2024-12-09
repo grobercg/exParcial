@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WIKIPEDIA</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'nuevoTema.css' %}">
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="left-panel">
+      <h2 class="title">WIKIPEDIA - NUEVO TEMA</h2>
+      <!-- Barra de búsqueda -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">Buscar</button>
+      </div>
+      <h3 class="title">Temas:</h3>
+      <!-- Tema 1 -->
+      <div>
+        <a href="{% url 'wikiApp:Ingeniería' %}">Ingeniería
+        </a>
+      </div>
+      <!-- Tema 2 -->
+      <div>
+        <a href="{% url 'wikiApp:Informática' %}">Informática
+        </a>
+      </div>
+      <!-- Tema 3 -->
+      <div>
+        <a href="{% url 'wikiApp:Economía' %}">Economía
+        </a>
+      </div>
+      <!-- Tema 4 -->
+      <div>
+        <a href="{% url 'wikiApp:Derecho' %}">Derecho
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoTema' %}">
+          <button class="create-button">Crear nuevo tema</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoArticulo' %}">
+          <button class="create-button">Crear nuevo artículo</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:inicio' %}">
+          <button class="create-button">Inicio</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="right-panel">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nombre_tema">Nombre de tema</label>
+          <input type="text" id="nombre_tema" name="nombre_tema" placeholder="Escribe el nombre del tema" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" name="descripcion" placeholder="Escribe la descripción" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Enviar formulario</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

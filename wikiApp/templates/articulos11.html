@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wikipedia</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'articulos.css' %}">
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="left-panel">
+      <h2 class="title">WIKIPEDIA</h2>
+      <!-- Barra de búsqueda -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">Buscar</button>
+      </div>
+      <h3 class="title">Temas:</h3>
+      <!-- Tema 1 -->
+      <div>
+        <a href="{% url 'wikiApp:Ingeniería' %}">Ingeniería
+        </a>
+      </div>
+      <!-- Tema 2 -->
+      <div>
+        <a href="{% url 'wikiApp:Informática' %}">Informática
+        </a>
+      </div>
+      <!-- Tema 3 -->
+      <div>
+        <a href="{% url 'wikiApp:Economía' %}">Economía
+        </a>
+      </div>
+      <!-- Tema 4 -->
+      <div>
+        <a href="{% url 'wikiApp:Derecho' %}">Derecho
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoTema' %}">
+          <button class="create-button">Crear nuevo tema</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoArticulo' %}">
+          <button class="create-button">Crear nuevo artículo</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:inicio' %}">
+          <button class="create-button">Inicio</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="right-panel">
+      <h2 class="article-title">Concreto premezclado</h2>
+      <h3 class="item-subtitle">Tema: Ingeniería</h3>
+      <div class="article-content">
+        <p>
+          El concreto premezclado es un tipo de concreto que se prepara en una planta de producción y se transporta ya mezclado al lugar de construcción. Está compuesto por una mezcla de cemento, agregados (como arena y grava o piedra triturada), agua y aditivos (si es necesario), que se dosifican y mezclan previamente en una planta de concreto, garantizando una mezcla homogénea y consistente.
+
+Características del concreto premezclado:
+Mezcla controlada: Al ser preparado en una planta, se puede controlar mejor la calidad de los materiales y la dosificación, lo que resulta en un concreto más uniforme.
+Comodidad y eficiencia: Al ser transportado listo para usarse, el concreto premezclado ahorra tiempo en el sitio de construcción y reduce la necesidad de mezcladoras en el lugar.
+Variedad de tipos: Puede producirse en diferentes tipos, según las especificaciones del proyecto, como concreto de alta resistencia, concreto con aditivos especiales (por ejemplo, retardantes o acelerantes de fraguado), concreto para condiciones climáticas específicas, etc.
+Menor desperdicio: Al ser preparado por expertos, se utiliza la cantidad exacta de materiales, lo que reduce el desperdicio de cemento y otros componentes.
+Facilidad de transporte: Se transporta en camiones mezcladores, lo que permite que el concreto se mantenga en movimiento durante el trayecto hasta el lugar de trabajo y no pierda sus propiedades.
+Ventajas del concreto premezclado:
+Calidad consistente: Como se prepara en una planta controlada, la calidad es más uniforme y consistente, reduciendo la probabilidad de errores humanos durante la mezcla en el lugar de la obra.
+Ahorro de tiempo: No es necesario realizar mezclas en el sitio, lo que acelera el proceso de construcción.
+Reducción de costos laborales: Al no ser necesario un equipo especializado para mezclar el concreto en el lugar, se reducen los costos de mano de obra y equipos de mezcla.
+Mejor manejo de materiales: Los materiales se adquieren en grandes cantidades y se almacenan correctamente, lo que minimiza las pérdidas y asegura una mezcla precisa.
+Desventajas del concreto premezclado:
+Costo del transporte: El costo del transporte puede ser significativo si el lugar de construcción está demasiado alejado de la planta de mezcla.
+Limitación en el tiempo de transporte: El concreto premezclado debe usarse en un tiempo específico después de su mezcla (generalmente 1-2 horas), ya que comienza a endurecerse. Esto puede ser un desafío si el sitio de trabajo está muy lejos o si el transporte se retrasa.
+Dependencia de la planta: Los constructores dependen de la planta para la entrega puntual del concreto, lo que puede generar retrasos si hay problemas en la planta o con el transporte.
+Usos del concreto premezclado:
+Construcción de viviendas: Se utiliza en la fabricación de cimientos, paredes, pisos y estructuras de edificios.
+Obras de infraestructura: Ideal para puentes, túneles, carreteras, acueductos y otras infraestructuras civiles.
+Proyectos de gran escala: Se usa en proyectos de gran tamaño donde se requiere una gran cantidad de concreto y una calidad consistente.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

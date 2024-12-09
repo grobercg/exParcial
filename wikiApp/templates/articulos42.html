@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wikipedia</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'articulos.css' %}">
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="left-panel">
+      <h2 class="title">WIKIPEDIA</h2>
+      <!-- Barra de búsqueda -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">Buscar</button>
+      </div>
+      <h3 class="title">Temas:</h3>
+      <!-- Tema 1 -->
+      <div>
+        <a href="{% url 'wikiApp:Ingeniería' %}">Ingeniería
+        </a>
+      </div>
+      <!-- Tema 2 -->
+      <div>
+        <a href="{% url 'wikiApp:Informática' %}">Informática
+        </a>
+      </div>
+      <!-- Tema 3 -->
+      <div>
+        <a href="{% url 'wikiApp:Economía' %}">Economía
+        </a>
+      </div>
+      <!-- Tema 4 -->
+      <div>
+        <a href="{% url 'wikiApp:Derecho' %}">Derecho
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoTema' %}">
+          <button class="create-button">Crear nuevo tema</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoArticulo' %}">
+          <button class="create-button">Crear nuevo artículo</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:inicio' %}">
+          <button class="create-button">Inicio</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="right-panel">
+      <h2 class="article-title">Cambios constitucionales en el Perú - 2024</h2>
+      <h3 class="item-subtitle">Tema: Derecho</h3>
+      <div class="article-content">
+        <p>
+            El año 2024 en Perú estuvo marcado por una serie de reformas constitucionales significativas. Entre los cambios más destacados se encuentra el restablecimiento de la bicameralidad, lo que implica el regreso del Senado y la Cámara de Diputados. Además, se aprobaron modificaciones para fortalecer la neutralidad e imparcialidad del sistema electoral. También se llevaron a cabo ajustes al Código Procesal Constitucional, afectando aspectos como la improcedencia liminar de las demandas y la competencia en procesos de amparo. Estas reformas buscan adaptar la Constitución a las necesidades actuales del país y garantizar un sistema político más representativo y eficiente.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

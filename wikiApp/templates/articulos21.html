@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wikipedia</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'articulos.css' %}">
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="left-panel">
+      <h2 class="title">WIKIPEDIA</h2>
+      <!-- Barra de búsqueda -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-input">
+        <button class="search-button">Buscar</button>
+      </div>
+      <h3 class="title">Temas:</h3>
+      <!-- Tema 1 -->
+      <div>
+        <a href="{% url 'wikiApp:Ingeniería' %}">Ingeniería
+        </a>
+      </div>
+      <!-- Tema 2 -->
+      <div>
+        <a href="{% url 'wikiApp:Informática' %}">Informática
+        </a>
+      </div>
+      <!-- Tema 3 -->
+      <div>
+        <a href="{% url 'wikiApp:Economía' %}">Economía
+        </a>
+      </div>
+      <!-- Tema 4 -->
+      <div>
+        <a href="{% url 'wikiApp:Derecho' %}">Derecho
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoTema' %}">
+          <button class="create-button">Crear nuevo tema</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:nuevoArticulo' %}">
+          <button class="create-button">Crear nuevo artículo</button>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="{% url 'wikiApp:inicio' %}">
+          <button class="create-button">Inicio</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="right-panel">
+      <h2 class="article-title">Machine Learning</h2>
+      <h3 class="item-subtitle">Tema: Informática</h3>
+      <div class="article-content">
+        <p>
+            Machine Learning (aprendizaje automático) es una rama de la inteligencia artificial (IA) que permite a las máquinas aprender de datos y mejorar su rendimiento en tareas específicas sin ser programadas explícitamente para ello. A través de algoritmos y modelos estadísticos, las máquinas identifican patrones y relaciones en grandes volúmenes de datos, lo que les permite hacer predicciones o tomar decisiones basadas en experiencias previas. El aprendizaje automático se aplica en una variedad de campos, como la visión por computadora, el procesamiento de lenguaje natural, las recomendaciones personalizadas, y el análisis de datos, entre otros.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
